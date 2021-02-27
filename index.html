@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <script defer src="node_modules/es-module-shims/dist/es-module-shims.js"></script>
+  <script type="importmap-shim">
+    {
+      "imports": {
+        "ol": "/node_modules/ol/index.js",
+        "ol/": "/node_modules/ol/",
+        "rbush": "/node_modules/rbush/index.js",
+        "quickselect": "/node_modules/quickselect/index.js"
+      }
+    }
+  </script>
+  <head>
+    <link rel="stylesheet" href="node_modules/ol/ol.css" type="text/css">
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            margin: 0px;
+        }
+      #map {
+        height: 100%;
+        width: 100%;
+      }
+      #controls {
+          height: 5rem;
+          width:100%;
+          position: fixed;
+          bottom: 0;
+          padding: .5rem;
+          background-color: white;
+      }
+    </style>
+    <title>Map with mini map inset</title>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="controls">
+    </div>
+    <script type="module-shim" src="src/main/map.js"></script>
+  </body>
+</html>
